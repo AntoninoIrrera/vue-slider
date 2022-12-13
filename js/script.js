@@ -35,12 +35,12 @@ createApp({
         previusSlides(){
             this.indice--;
             if(this.indice == -1){
-                this.indice = 4;
+                this.indice = this.slides.length - 1;
             }
         },
         nextSlides(){
             this.indice++;
-            if(this.indice == 5){
+            if(this.indice == this.slides.length){
                 this.indice = 0;
             }
         }
