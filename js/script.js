@@ -43,8 +43,10 @@ createApp({
             if(this.indice == this.slides.length){
                 this.indice = 0;
             }
+        },
+        getSlideClick(indiceCorrente){
+            this.indice = indiceCorrente;
         }
-
 
     }
 }).mount("#app")
