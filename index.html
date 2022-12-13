@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs" @mouseover="stopCarosello()" @mouseleave="inzioCarosello()">
                     <div class="prev" @click="previusSlides()"></div>
                     <div class="next" @click="nextSlides()"></div>
 

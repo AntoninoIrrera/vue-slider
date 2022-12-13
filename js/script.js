@@ -2,6 +2,7 @@
 
 const {createApp} = Vue     
 
+
 createApp({
     data(){
         return{
@@ -46,11 +47,15 @@ createApp({
         },
         getSlideClick(indiceCorrente){
             this.indice = indiceCorrente;
+        },
+        stopCarosello(){
+            clearInterval(intervallo);
+        },
+        inzioCarosello(){
+            intervallo = setInterval(this.nextSlides, 3*1000);
         }
-
     },
     created(){
-        setInterval(this.nextSlides, 3*1000);
+        intervallo = setInterval(this.nextSlides, 3*1000);
     }
 }).mount("#app")
-
