@@ -48,6 +48,9 @@ createApp({
             this.indice = indiceCorrente;
         }
 
+    },
+    created(){
+        setInterval(this.nextSlides, 3*1000);
     }
 }).mount("#app")
 
